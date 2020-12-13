@@ -1,24 +1,30 @@
 import React from "react"
-import { Link } from "gatsby"
-
+// import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-import Menu from "../components/menu"
 
-const IndexPage = () => (
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    placeholderImage: file(relativePath: { eq: "background-main.jpg" }) {
+      childImageSharp {
+        fluid{
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`)
+return (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <Img fluid={data.placeholderImage.childImageSharp.fluid} fadeIn durationFadeIn={1000}/>
+    <h1>Welcome to Craftastic!</h1>
+    <div>
     </div>
-    <Menu/>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </Layout>
 )
-
+}
 export default IndexPage
