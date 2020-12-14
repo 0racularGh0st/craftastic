@@ -1,8 +1,8 @@
 .background-main-style{
     filter: brightness(0.4);   
-    position: absolute !important;
-    overflow: hidden;
     width: 100vw;
     z-index: -1;
-    top: 0;
+}
+.home-text-style{
+    padding: 1rem;
 }

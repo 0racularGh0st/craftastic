@@ -13,7 +13,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          <img src="./my-logo.png" height="40" width="40" alt="logo" aria-label="my-logo" style={{marginBottom:"0"}}/>
         </Link>
       </h1>
     </div>
