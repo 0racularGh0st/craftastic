@@ -2,7 +2,16 @@
     filter: brightness(0.4);   
     width: 100vw;
     z-index: -1;
+    height: 100vh;
+}
+.parallax-background{
+    z-index: -1;
+    position: absolute;
+    top: 0;
 }
 .home-text-style{
     padding: 1rem;
+    height: 80vh;
+    background: white;
+    z-index: 1;
 }
