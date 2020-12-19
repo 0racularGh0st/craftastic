@@ -1,7 +1,7 @@
 .jar-paper{
     position: relative;
     height: 400px;
-    min-width:320px;
+    min-width:300px;
     max-width: 400px;
 }
 .jar-image-style{
@@ -12,6 +12,20 @@
     }
 }
 .jar-carousel-style{
+    min-width:300px;
+    max-width: 400px;
+    overflow: unset !important;
+    margin: 0.5rem;
+    // transform: perspective(600px) rotateY(-10deg);
+}
+.category-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.category-details{
     min-width:320px;
     max-width: 400px;
+    text-align: center;
+    padding: 1rem;
 }

@@ -42,10 +42,14 @@ const Jars = () => {
   `)
   console.log("Jars",jars);
 return (
-  <div>
-      <Carousel
+  <div className="category-container">
+          <div className="category-details">
+            <h2>Bottles</h2>
+            <p style={{color:"#717171"}}>We take used bottles and turn them into showpieces that are worthy for a place on your living-room shelf.</p>
+          </div>
+          <Carousel
                     className="jar-carousel-style"
-                    autoPlay={true}
+                    autoPlay={false}
                     animation={"fade"}
                     indicators={true}
                     interval={2500}
