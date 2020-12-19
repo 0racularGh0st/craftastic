@@ -1,9 +1,4 @@
-.jar-paper{
-    position: relative;
-    height: 400px;
-    min-width:300px;
-    max-width: 400px;
-}
+
 .jar-image-style{
     height: 400px;
     border-radius: 4px;
@@ -11,21 +6,68 @@
         object-fit: contain !important;
     }
 }
-.jar-carousel-style{
-    min-width:300px;
-    max-width: 400px;
-    overflow: unset !important;
-    margin: 0.5rem;
-    // transform: perspective(600px) rotateY(-10deg);
+
+
+@media screen and (max-width: 767px){
+    .jar-paper{
+        position: relative;
+        height: 400px;
+        min-width:300px;
+        max-width: 400px;
+    }
+    .category-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .category-details{
+        min-width:320px;
+        max-width: 400px;
+        text-align: center;
+        padding: 1rem;
+    }
+    .jar-carousel-style{
+        min-width:300px;
+        max-width: 400px;
+        overflow: unset !important;
+        margin: 0.5rem;
+        // transform: perspective(600px) rotateY(-10deg);
+    }
 }
-.category-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media screen and (min-width: 768px){
+    .category-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .category-details{
+        max-width: 320px;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .jar-carousel-style{
+        overflow: unset !important;
+        margin: 1rem;
+        width: 400px;
+        transform: perspective(600px) rotateY(-10deg);
+        transition: all 0.3s ease;
+        &:hover{
+            transform: perspective(600px) rotateY(0deg);
+
+            .jar-paper{
+                box-shadow: var(--elevate10) !important;
+            }
+        }
+
+    }
+    .jar-paper{
+        position: relative;
+        height: 400px;
+        min-width:300px;
+        max-width: 400px;
+        transition: all 0.3s ease;
+        box-shadow: var(--elevate_rotated) !important;
+    }
 }
-.category-details{
-    min-width:320px;
-    max-width: 400px;
-    text-align: center;
-    padding: 1rem;
-}
+

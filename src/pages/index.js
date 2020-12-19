@@ -64,7 +64,7 @@ return (
     </div>
     <div className="home-content-container-two">
       <h1 style={{paddingTop:"1.45rem",marginBottom:"5rem",textAlign:"center"}}>
-        Things we make </h1>
+        Things We Re-Make </h1>
         <Jars></Jars>
     </div>
     <div style={{height: "var(--height)",background:"white"}}>

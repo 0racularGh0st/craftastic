@@ -49,7 +49,7 @@ return (
           </div>
           <Carousel
                     className="jar-carousel-style"
-                    autoPlay={false}
+                    autoPlay={true}
                     animation={"fade"}
                     indicators={true}
                     interval={2500}
