@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Jars from "../components/jars"
 import Rellax from 'rellax';
 import "./main.scss";
 const IndexPage = () => {
@@ -60,6 +61,11 @@ return (
         <h1 className="home-main-heading">Welcome to Craftastic! </h1>
         <h2 className="home-sub-heading" style={{filter:"brightness(0.7)"}}>We turn junk into beauty.</h2>
         </div>
+    </div>
+    <div className="home-content-container-two">
+      <h1 style={{paddingTop:"1.45rem",textAlign:"center"}}>
+        Things we make </h1>
+        <Jars></Jars>
     </div>
     <div style={{height: "var(--height)",background:"white"}}>
 
