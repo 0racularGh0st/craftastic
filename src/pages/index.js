@@ -43,29 +43,19 @@ const IndexPage = () => {
 return (
   <Layout>
     <SEO title="Home" />
-    <Img fluid={data.placeholderImage.childImageSharp.fluid} 
-    fadeIn 
-    durationFadeIn={1000}
-    className="rellax background-main-style"
-    />
-    <div className="home-text-style">
-      <h1>Welcome to Craftastic!</h1>
+    <div className="home-content-container-one">
+        <Img fluid={data.placeholderImage.childImageSharp.fluid} 
+        fadeIn 
+        durationFadeIn={1000}
+        className="rellax background-main-style"
+        />
+        <div className="home-text-style">
+        <h1>Welcome to Craftastic! </h1>
+        <h2 style={{filter:"brightness(0.7)"}}>We turn junk into beauty.</h2>
+        </div>
     </div>
-    <Img fluid={data.placeholderImage.childImageSharp.fluid} 
-    fadeIn 
-    durationFadeIn={1000}
-    className="rellax background-main-style"
-    />
-    <div className="home-text-style">
-      <h1>Welcome to Craftastic!</h1>
-    </div>
-    <Img fluid={data.placeholderImage.childImageSharp.fluid} 
-    fadeIn 
-    durationFadeIn={1000}
-    className="rellax background-main-style"
-    />
-    <div className="home-text-style">
-      <h1>Welcome to Craftastic!</h1>
+    <div style={{height: "var(--height)",background:"white"}}>
+
     </div>
   </Layout>
 )
