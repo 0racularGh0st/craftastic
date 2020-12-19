@@ -20,6 +20,8 @@
     flex-direction: column;
     justify-content: center;
     width: 100vw;
+    overflow-x: hidden;
+    align-items: center;
 }
 .home-content-container-one{
     position: relative;

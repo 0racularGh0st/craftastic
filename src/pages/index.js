@@ -24,6 +24,13 @@ const IndexPage = () => {
     vertical: true,
     horizontal: false
     });
+    let heading1= document.querySelector(".home-main-heading");
+    let subHeading1= document.querySelector(".home-sub-heading");
+    window.addEventListener('scroll', ()=>{
+      let scrollPosition = window.pageYOffset;
+      heading1.style.transform = "translateX("+ scrollPosition*0.3 + "px)";
+      subHeading1.style.transform = "translateX(-"+ scrollPosition*0.4 + "px)";
+    })
     return() => {
       console.log("cleanup");
       rellax.destroy();
@@ -50,8 +57,8 @@ return (
         className="rellax background-main-style"
         />
         <div className="home-text-style">
-        <h1>Welcome to Craftastic! </h1>
-        <h2 style={{filter:"brightness(0.7)"}}>We turn junk into beauty.</h2>
+        <h1 className="home-main-heading">Welcome to Craftastic! </h1>
+        <h2 className="home-sub-heading" style={{filter:"brightness(0.7)"}}>We turn junk into beauty.</h2>
         </div>
     </div>
     <div style={{height: "var(--height)",background:"white"}}>
