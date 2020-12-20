@@ -28,9 +28,6 @@ const Jars = () => {
         node {
           id
           childImageSharp {
-            fixed(height:400) {
-                ...GatsbyImageSharpFixed_withWebp
-            }
             fluid(fit: INSIDE){
                 ...GatsbyImageSharpFluid_withWebp
             }
@@ -59,7 +56,7 @@ return (
                 >
                     {
                         jars.imageSet.edges.map((image, index) => {
-                            return <JarContainer id={image.node.id} key={index} fixed={image.node.childImageSharp.fixed} fluid={image.node.childImageSharp.fluid} aspectRatio={image.node.childImageSharp.fluid.aspectRatio}/>
+                            return <JarContainer id={image.node.id} key={index} fluid={image.node.childImageSharp.fluid} />
                         })
                     }
       </Carousel>
