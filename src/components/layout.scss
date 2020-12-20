@@ -611,5 +611,6 @@ pre tt:after {
   --height: calc(var(--vh, 1vh) * 100);
   --elevate10: 0px 6px 6px -3px rgba(0,0,0,0.2), 0px 10px 14px 1px rgba(0,0,0,0.14), 0px 4px 18px 3px rgba(0,0,0,0.12);
   --elevate_rotated: 0 27.5px 40px -17.5px rgba(0,0,0,.4), 46.2px 37.5px 40px -17.5px rgba(0,0,0,.4);
+  --elevate_rotated-reverse: 0 27.5px 40px -17.5px rgba(0,0,0,.4), -46.2px 37.5px 40px -17.5px rgba(0,0,0,.4);
   --bg-color: #f6f9fc;
 }

@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Bottles from "../components/bottles"
+import Jars from "../components/jars"
 import Rellax from 'rellax';
 import "./main.scss";
 const IndexPage = () => {
@@ -66,6 +67,7 @@ return (
       <h1 style={{paddingTop:"1.45rem",marginBottom:"5rem",textAlign:"center"}}>
         Things We Re-Make </h1>
         <Bottles></Bottles>
+        <Jars></Jars>
     </div>
     <div style={{height: "var(--height)",background:"white"}}>
 
