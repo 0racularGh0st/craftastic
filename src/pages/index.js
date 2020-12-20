@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Jars from "../components/jars"
+import Bottles from "../components/bottles"
 import Rellax from 'rellax';
 import "./main.scss";
 const IndexPage = () => {
@@ -65,7 +65,7 @@ return (
     <div className="home-content-container-two">
       <h1 style={{paddingTop:"1.45rem",marginBottom:"5rem",textAlign:"center"}}>
         Things We Re-Make </h1>
-        <Jars></Jars>
+        <Bottles></Bottles>
     </div>
     <div style={{height: "var(--height)",background:"white"}}>
 

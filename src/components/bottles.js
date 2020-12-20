@@ -3,27 +3,27 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Carousel from 'react-material-ui-carousel'
 import {Paper} from '@material-ui/core'
-import "./jars.scss";
-const JarContainer = (props) => {
+import "./category.scss";
+const BottlesContainer = (props) => {
     return (
         <Paper
-            className="jar-paper"
+            className="category-paper"
             style={{
                 backgroundColor: "white",
             }}
             elevation={10}
         >
            <div>
-           <Img key={props.id} fluid={props.fluid} className="jar-image-style"/>
+           <Img key={props.id} fluid={props.fluid} className="category-image-style"/>
            </div>
         </Paper>
     )
 }
-const Jars = () => {
+const Bottles = () => {
   
-    const jars = useStaticQuery(graphql`
+    const bottles = useStaticQuery(graphql`
   query {
-    imageSet:  allFile(filter: {relativeDirectory: {eq: "jars"}}) {
+    imageSet:  allFile(filter: {relativeDirectory: {eq: "bottles"}}) {
       edges {
         node {
           id
@@ -40,7 +40,7 @@ const Jars = () => {
     }
   }
   `)
-  console.log("Jars",jars);
+  //console.log("Jars",jars);
 return (
   <div className="category-container">
           <div className="category-details">
@@ -48,7 +48,7 @@ return (
             <p style={{color:"#717171"}}>We take used bottles and turn them into showpieces that are worthy for a place on your living-room shelf.</p>
           </div>
           <Carousel
-                    className="jar-carousel-style"
+                    className="category-carousel-style"
                     autoPlay={true}
                     animation={"fade"}
                     indicators={true}
@@ -58,20 +58,13 @@ return (
 
                 >
                     {
-                        jars.imageSet.edges.map((image, index) => {
-                            return <JarContainer id={image.node.id} key={index} fixed={image.node.childImageSharp.fixed} fluid={image.node.childImageSharp.fluid} aspectRatio={image.node.childImageSharp.fluid.aspectRatio}/>
+                        bottles.imageSet.edges.map((image, index) => {
+                            return <BottlesContainer id={image.node.id} key={index} fixed={image.node.childImageSharp.fixed} fluid={image.node.childImageSharp.fluid} aspectRatio={image.node.childImageSharp.fluid.aspectRatio}/>
                         })
                     }
       </Carousel>
-    {/* {
-          jars.imageSet.edges.map(image =>
-            (
-            <Img key={image.node.id} fixed={image.node.childImageSharp.fixed}/>
-            )
-          )
-    } */}
   </div>
 )
 }
 
-export default Jars;
+export default Bottles;
