@@ -2,8 +2,17 @@
     display: flex;
     width: 60%;
     justify-content: space-evenly;
-    .menu-link-style{
-
+    .menu-link-styles{
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+        width: 73px;
+        svg{
+            margin-right: 6px;
+        }
+        &:hover{
+            transform: translateY(-3px);
+        }
     }
     a{
         text-decoration: none;
