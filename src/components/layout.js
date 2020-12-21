@@ -21,6 +21,19 @@ window.addEventListener('resize', () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+let header = document.querySelector(".header-menu-style");
+let prevScrollpos = window.pageYOffset;
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 65) {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        header.classList.remove("hide");
+      } else {
+        header.classList.add("hide");
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  });
   })
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

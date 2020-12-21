@@ -8,7 +8,7 @@
         right: 0;
         justify-content: space-between;
         width: 165px;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0,0,0,0.8);
         transform: translateX(100%);
         overflow-x: hidden;
         transition: all 0.3s ease;
@@ -54,7 +54,6 @@
     .burger {
         display: block;
         cursor: pointer;
-        background: rgba(0, 0, 0, 0.5);
       }
     .burger div {
         width: 25px;
