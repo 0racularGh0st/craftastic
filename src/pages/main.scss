@@ -31,4 +31,24 @@
     position: relative;
     min-height: var(--height);
     background: var(--bg-color);
+    a{
+        text-decoration: none;
+    }
 }
+.more-link{
+    display: flex;
+    text-decoration: none;
+    margin-left: 5px;
+    align-items: center;
+    color: #6ebfc2;
+    &:hover{
+        .more-link-icon{
+            transform: translateX(3px);
+        }
+    }
+    .more-link-icon{
+        margin-left: 5px;
+        transform: translateX(0px);
+        transition: all 0.3s ease;
+    }
+    }

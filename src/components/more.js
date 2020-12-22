@@ -1,6 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import "./more.scss"
 
 const More = () => {
@@ -10,20 +8,7 @@ const More = () => {
                 textAlign: "center",
                 marginLeft: "0.5rem",
                 marginRight: "0.5rem"
-            }}>Want to see more items? </h3>
-            <h4 style={{textAlign:"center",color:"rgb(113, 113, 113)"}}>Go to the 
-                <div style={{display:"inline-block"}}>
-                <Link to="/Gallery">
-                <h4 className="more-link">Gallery <ExitToAppIcon className="more-link-icon"/></h4>
-                 </Link>
-               </div>
-            </h4>
-
-            <h3 style={{
-                textAlign: "center",
-                marginLeft: "0.5rem",
-                marginRight: "0.5rem"
-            }}>Want to place an order? </h3>
+            }} className="contact-section">Want to place an order? </h3>
             <h4 style={{textAlign:"center",color:"rgb(113, 113, 113)"}}>Take a screenshot of what you want and Contact Us
             </h4>
             <h4 className="contact-info">DM us on

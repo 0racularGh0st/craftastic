@@ -18,6 +18,7 @@
             align-items: center;
             transition: all 0.3s ease-in-out;
             padding: 1rem 1.3rem;
+            cursor: pointer;
             svg{
                 margin-right: 6px;
             }
@@ -45,6 +46,11 @@
             h4{
                 margin-bottom: 0;
             }
+        }
+        h4{
+            text-decoration: none;
+            color: white;
+                margin-bottom: 0;
         }
         &.show{
             transform: translateX(0%);
@@ -84,6 +90,7 @@
             align-items: center;
             transition: all 0.3s ease;
             width: 73px;
+            cursor: pointer;
             svg{
                 margin-right: 6px;
             }
@@ -101,6 +108,11 @@
             h4{
                 margin-bottom: 0;
             }
+        }
+        h4{
+            text-decoration: none;
+            color: white;
+                margin-bottom: 0;
         }
     }
     .burger{

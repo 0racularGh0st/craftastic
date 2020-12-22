@@ -1,6 +1,6 @@
 import React, {useEffect} from "react"
 // import { Link } from "gatsby"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link} from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,8 +9,8 @@ import Jars from "../components/jars"
 import Cages from "../components/cages"
 import Wreaths from "../components/wreaths"
 import Festive from "../components/festive"
-import More from "../components/more"
 import Rellax from 'rellax';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import "./main.scss";
 
 const IndexPage = () => {
@@ -76,9 +76,19 @@ return (
         <Cages></Cages>
         <Wreaths></Wreaths>
         <Festive></Festive>
-        <More></More>
-    </div>
-    <div style={{height: "var(--height)",background:"white"}}>
+
+        <h3 style={{
+                textAlign: "center",
+                marginLeft: "0.5rem",
+                marginRight: "0.5rem"
+            }}>Want to see more items? </h3>
+            <h4 style={{textAlign:"center",color:"rgb(113, 113, 113)",marginBottom:"0"}}>Go to the 
+                <div style={{display:"inline-block"}}>
+                <Link to="/Gallery">
+                <h4 className="more-link">Gallery <ExitToAppIcon className="more-link-icon"/></h4>
+                 </Link>
+               </div>
+            </h4>
 
     </div>
   </Layout>

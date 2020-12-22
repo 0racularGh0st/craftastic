@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Menu from "./menu"
+import More from "./more"
 import "./layout.scss"
 
 const Layout = ({ children }) => {
@@ -53,6 +54,8 @@ let prevScrollpos = window.pageYOffset;
       </div>
       <div>
         <main>{children}</main>
+
+        <More></More>
         <footer style={{
           marginTop: `2rem`
         }}>
