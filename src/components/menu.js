@@ -12,7 +12,6 @@ const Menu = () => {
         burger.addEventListener("click", () => {
             menu.classList.toggle("show");
             //burger animation
-            console.log("Clicked");
             burger.classList.toggle("toggle");
           });
     })

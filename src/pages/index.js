@@ -8,8 +8,10 @@ import Bottles from "../components/bottles"
 import Jars from "../components/jars"
 import Cages from "../components/cages"
 import Wreaths from "../components/wreaths"
+import Festive from "../components/festive"
 import Rellax from 'rellax';
 import "./main.scss";
+
 const IndexPage = () => {
 //   useEffect(()=>{
 //     window.addEventListener('scroll', ()=>{
@@ -72,6 +74,7 @@ return (
         <Jars></Jars>
         <Cages></Cages>
         <Wreaths></Wreaths>
+        <Festive></Festive>
     </div>
     <div style={{height: "var(--height)",background:"white"}}>
 
