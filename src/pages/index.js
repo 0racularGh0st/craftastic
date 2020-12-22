@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Bottles from "../components/bottles"
 import Jars from "../components/jars"
+import Cages from "../components/cages"
+import Wreaths from "../components/wreaths"
 import Rellax from 'rellax';
 import "./main.scss";
 const IndexPage = () => {
@@ -65,9 +67,11 @@ return (
     </div>
     <div className="home-content-container-two">
       <h1 style={{paddingTop:"1.45rem",marginBottom:"5rem",textAlign:"center"}}>
-        Things We Re-Make </h1>
+        Things We Make </h1>
         <Bottles></Bottles>
         <Jars></Jars>
+        <Cages></Cages>
+        <Wreaths></Wreaths>
     </div>
     <div style={{height: "var(--height)",background:"white"}}>
 
