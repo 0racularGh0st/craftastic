@@ -1,0 +1,38 @@
+.more-container{
+    min-height: 50vh;
+    margin: 4rem 0.5rem 2rem 0.5rem;
+    a{
+        text-decoration: none;
+    }
+    .more-link{
+    display: flex;
+    text-decoration: none;
+    margin-left: 5px;
+    align-items: center;
+    color: #6ebfc2;
+    &:hover{
+        .more-link-icon{
+            transform: translateX(3px);
+        }
+    }
+    .more-link-icon{
+        margin-left: 5px;
+        transform: translateX(0px);
+        transition: all 0.3s ease;
+    }
+    }
+    .contact-info{
+        color: #717171;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .contact-icon{
+            transform: translateY(0);
+            transition: all 0.3s ease;
+            &:hover{
+                transform: translateY(-3px);
+            }
+        }
+    }
+}

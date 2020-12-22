@@ -9,6 +9,7 @@ import Jars from "../components/jars"
 import Cages from "../components/cages"
 import Wreaths from "../components/wreaths"
 import Festive from "../components/festive"
+import More from "../components/more"
 import Rellax from 'rellax';
 import "./main.scss";
 
@@ -75,6 +76,7 @@ return (
         <Cages></Cages>
         <Wreaths></Wreaths>
         <Festive></Festive>
+        <More></More>
     </div>
     <div style={{height: "var(--height)",background:"white"}}>
 
