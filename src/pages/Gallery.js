@@ -83,7 +83,7 @@ const Gallery = () => {
   
     return (
         <Layout>
-        <SEO title="Page two" />
+        <SEO title="Gallery" />
         <div className="gallery-main-container">
             <h1 style={{textAlign:"center"}}>Gallery</h1>
             <h4 style={{textAlign:"center",color:"rgb(113, 113, 113)"}}>Here are some of the things we've made so far.</h4>

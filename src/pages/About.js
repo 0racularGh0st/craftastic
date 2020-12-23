@@ -5,7 +5,7 @@ import "./about.scss";
 const About = () => {
     return (
         <Layout>
-        <SEO title="Page two" />
+        <SEO title="About" />
         <div className="about-main-container">
           <h1>About Us</h1>
           <h4 className="about-content">
