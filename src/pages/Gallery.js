@@ -9,9 +9,45 @@ import Fade from '@material-ui/core/Fade';
 import CancelRoundedIcon from '@material-ui/icons/CancelRounded';
 import "./gallery.scss";
 const Gallery = () => {
-  const bottles = useStaticQuery(graphql`
+  const images = useStaticQuery(graphql`
   query {
-    imageSet:  allFile(filter: {relativeDirectory: {eq: "gallery_bottles"}}) {
+    bottles:  allFile(filter: {relativeDirectory: {eq: "gallery_bottles"}}) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            fluid(fit: INSIDE,maxWidth:600){
+                ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    },
+    jars:  allFile(filter: {relativeDirectory: {eq: "gallery_jars"}}) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            fluid(fit: INSIDE,maxWidth:600){
+                ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    },
+    cages:  allFile(filter: {relativeDirectory: {eq: "cages"}}) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            fluid(fit: INSIDE,maxWidth:600){
+                ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    },
+    wreaths:  allFile(filter: {relativeDirectory: {eq: "gallery_wreaths"}}) {
       edges {
         node {
           id
@@ -26,7 +62,7 @@ const Gallery = () => {
   }
   `)
   const [open, setOpen] = useState(false);
-  const [photo, setPhoto] = useState(bottles.imageSet.edges[0].node.childImageSharp.fluid);
+  const [photo, setPhoto] = useState(images.bottles.edges[0].node.childImageSharp.fluid);
   const handleOpen = () => {
     setOpen(true);
   };
@@ -38,6 +74,13 @@ const Gallery = () => {
     setPhoto(photoSrc);
     handleOpen();
   }
+  const _choosePhoto = (e,photoSrc) => {
+    if(e.keyCode === 13 ){
+      setPhoto(photoSrc);
+     handleOpen();
+    }
+  }
+  
     return (
         <Layout>
         <SEO title="Page two" />
@@ -46,9 +89,36 @@ const Gallery = () => {
             <h4 style={{textAlign:"center",color:"rgb(113, 113, 113)"}}>Here are some of the things we've made so far.</h4>
             <div className="gallery-images">
                    {
-                        bottles.imageSet.edges.map((image, index) => {
+                        images.bottles.edges.map((image, index) => {
                            return (
-                             <div key={index} style={{display:"grid"}} onClick={() => choosePhoto(image.node.childImageSharp.fluid)}>
+                             <div key={index} style={{display:"grid"}} onClick={() => choosePhoto(image.node.childImageSharp.fluid)} role="button" tabIndex={index} onKeyDown={(e) => _choosePhoto(e,image.node.childImageSharp.fluid)}>
+                               <Img fluid={image.node.childImageSharp.fluid} className="gallery-image" alt="gallery-image" aria-label="gallery-image"/>
+                               </div>
+                           )
+                        })
+                    }
+                    {
+                        images.jars.edges.map((image, index) => {
+                           return (
+                             <div key={index} style={{display:"grid"}} onClick={() => choosePhoto(image.node.childImageSharp.fluid)} role="button" tabIndex={index} onKeyDown={(e) => _choosePhoto(e,image.node.childImageSharp.fluid)}>
+                               <Img fluid={image.node.childImageSharp.fluid} className="gallery-image" alt="gallery-image" aria-label="gallery-image"/>
+                               </div>
+                           )
+                        })
+                    }
+                    {
+                        images.cages.edges.map((image, index) => {
+                           return (
+                             <div key={index} style={{display:"grid"}} onClick={() => choosePhoto(image.node.childImageSharp.fluid)} role="button" tabIndex={index} onKeyDown={(e) => _choosePhoto(e,image.node.childImageSharp.fluid)}>
+                               <Img fluid={image.node.childImageSharp.fluid} className="gallery-image" alt="gallery-image" aria-label="gallery-image"/>
+                               </div>
+                           )
+                        })
+                    }
+                    {
+                        images.wreaths.edges.map((image, index) => {
+                           return (
+                             <div key={index} style={{display:"grid"}} onClick={() => choosePhoto(image.node.childImageSharp.fluid)} role="button" tabIndex={index} onKeyDown={(e) => _choosePhoto(e,image.node.childImageSharp.fluid)}>
                                <Img fluid={image.node.childImageSharp.fluid} className="gallery-image" alt="gallery-image" aria-label="gallery-image"/>
                                </div>
                            )

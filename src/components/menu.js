@@ -46,6 +46,13 @@ const toggleBurger = () => {
         burger.classList.add("toggle");
     }
 }
+const handleKeyDown = (ev) => {
+    // check keys if you want
+  if (ev.keyCode === 13) {
+     smoothScroll(".contact-section",1000);
+     toggleBurger();
+   }
+}
 const Menu = () => {
     useEffect(()=>{
         const burger = document.querySelector(".burger");
@@ -90,7 +97,7 @@ const Menu = () => {
                 <InfoRoundedIcon className="menu-item-style"/>
                 <h4>About</h4>
             </Link>
-            <div className="menu-link-styles contact" onClick={()=>{smoothScroll(".contact-section",1000); toggleBurger();}} role="button" tabIndex="0">
+            <div className="menu-link-styles contact" onClick={()=>{smoothScroll(".contact-section",1000); toggleBurger();}} role="button" tabIndex="0" onKeyDown={handleKeyDown}>
                 <PermPhoneMsgRoundedIcon className="menu-item-style"/>
                 <h4>Contact</h4>
             </div>

@@ -19,6 +19,11 @@
             transition: all 0.3s ease-in-out;
             padding: 1rem 1.3rem;
             cursor: pointer;
+            &.contact{
+                &:focus{
+                    outline: none !important;
+                }
+            }
             svg{
                 margin-right: 6px;
             }
@@ -91,6 +96,11 @@
             transition: all 0.3s ease;
             width: 73px;
             cursor: pointer;
+            &.contact{
+                &:focus{
+                    outline: none !important;
+                }
+            }
             svg{
                 margin-right: 6px;
             }
