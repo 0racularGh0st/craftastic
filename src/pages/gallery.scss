@@ -1,7 +1,18 @@
 .gallery-main-container{
     padding-top: 100px;
     background: var(--bg-color);
-
+    .gallery-images{
+        .gallery-image{
+            transition: all 0.3s ease;
+            z-index: 1;
+            &:hover{
+                transform: scale(1.1);
+                 z-index: 99;
+                 border-radius: 5px;
+                 box-shadow: var(--elevate-dark);
+            }
+        }
+    }
     @media screen and (max-width:767px){
         .gallery-images{
             display: grid;
@@ -19,5 +30,34 @@
             display: grid;
             grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
         }
+    }
+}
+
+.modal-styles{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // .modal-image-container{
+    //     height: 100vh;
+    // }
+    &:focus,:focus-visible,:active{
+        outline: none;
+    }
+    .modal-image{
+        max-height: 90vh;
+        img{
+            object-fit: contain !important;
+        }
+    }
+    .modal-close-icon{
+        color: white;
+        font-size: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1.5rem;
+        z-index: 999;
     }
 }
