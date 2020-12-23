@@ -83,7 +83,7 @@ return (
                 marginLeft: "0.5rem",
                 marginRight: "0.5rem"
             }}>Want to see more items? </h3>
-            <h4 style={{textAlign:"center",color:"rgb(113, 113, 113)",marginBottom:"0"}}>Go to the 
+            <h4 style={{textAlign:"center",color:"rgb(113, 113, 113)",marginBottom:"0"}}>Check out the 
                 <div style={{display:"inline-block"}}>
                 <Link to="/Gallery">
                 <h4 className="more-link">Gallery <ExitToAppIcon className="more-link-icon"/></h4>

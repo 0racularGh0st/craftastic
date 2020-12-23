@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Menu from "./menu"
 import More from "./more"
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import "./layout.scss"
 
 const Layout = ({ children }) => {
@@ -56,10 +57,17 @@ let prevScrollpos = window.pageYOffset;
         <main>{children}</main>
 
         <More></More>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
-         
+        <footer className="layout-footer">
+          <p>
+          Designed and Built
+          </p>
+          <p>by</p>
+          <a href="https://nigeldavid.in" target="_blank" rel="noopener noreferrer" aria-label="nigel david">
+          <div className="developed-by">
+          <p>Nigel David Tariang</p>
+          <ExitToAppIcon/>
+          </div>
+          </a>
         </footer>
       </div>
     </>
