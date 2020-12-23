@@ -1,7 +1,26 @@
 import React from 'react'
+import {useStaticQuery, graphql} from 'gatsby'
 import "./more.scss"
 
 const More = () => {
+    const images = useStaticQuery(graphql`
+  query {
+    whatsapp: file(relativePath: { eq: "whatsapp.png" }) {
+      childImageSharp {
+        fixed(width:200){
+          ...GatsbyImageSharpFixed
+        }
+      }
+    },
+    instagram: file(relativePath: { eq: "instagram.png" }) {
+        childImageSharp {
+          fixed(width:200){
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+  }
+`)
     return (
         <div className="more-container">
             <h3 style={{
@@ -13,12 +32,12 @@ const More = () => {
             </h4>
             <h4 className="contact-info">DM us on
                 <a href="https://www.instagram.com/_craftastic_09/" target="_blank" rel="noopener noreferrer" aria-label="instagram" className="contact-icon"> 
-                    <img src="./instagram.png" height="30" width="30" alt="instagram" aria-label="instagram" style={{margin:"0 4px"}}/>
+                    <img src={images.instagram.childImageSharp.fixed.src} height="30" width="30" alt="instagram" aria-label="instagram" style={{margin:"0 4px"}}/>
                 </a>
             </h4>
             <h4 className="contact-info">Chat with us on
                 <a href="https://api.whatsapp.com/send?phone=917085562703" target="_blank" rel="noopener noreferrer" aria-label="instagram" className="contact-icon"> 
-                    <img src="./whatsapp.png" height="30" width="30" alt="whatsapp" aria-label="whatsapp" style={{margin:"0 4px"}}/>
+                    <img src={images.whatsapp.childImageSharp.fixed.src} height="30" width="30" alt="whatsapp" aria-label="whatsapp" style={{margin:"0 4px"}}/>
                 </a>
             </h4>
             

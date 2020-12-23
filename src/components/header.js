@@ -1,8 +1,21 @@
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }) => { 
+  const logo = useStaticQuery(graphql`
+  query {
+    image: file(relativePath: { eq: "my-logo.png" }) {
+      childImageSharp {
+        fixed{
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`)
+console.log("Logo",logo);
+  return(
   <header>
     <div>
       <h1 style={{ margin: 0 }}>
@@ -13,12 +26,12 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          <img src="./my-logo.png" height="40" width="40" alt="logo" aria-label="my-logo" style={{marginBottom:"0"}}/>
+          <img src={logo.image.childImageSharp.fixed.src} height="40" width="40" alt="logo" aria-label="my-logo" style={{marginBottom:"0"}}/>
         </Link>
       </h1>
     </div>
   </header>
-)
+)}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
