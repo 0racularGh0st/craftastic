@@ -36,22 +36,22 @@ const Gallery = () => {
   };
   const choosePhoto = (photoSrc) => {
     setPhoto(photoSrc);
-    console.log("chosen",photo);
+    handleOpen();
   }
-  console.log("Image",bottles.imageSet.edges[0]);
     return (
         <Layout>
         <SEO title="Page two" />
         <div className="gallery-main-container">
-        <button type="button" onClick={handleOpen}>
-        Open Modal
-      </button>
             <h1 style={{textAlign:"center"}}>Gallery</h1>
             <h4 style={{textAlign:"center",color:"rgb(113, 113, 113)"}}>Here are some of the things we've made so far.</h4>
             <div className="gallery-images">
                    {
                         bottles.imageSet.edges.map((image, index) => {
-                           return <Img key={index} fluid={image.node.childImageSharp.fluid} className="gallery-image" alt="gallery-image" aria-label="gallery-image" onClick={()=>{choosePhoto(image.node.childImageSharp.fluid)}}/>
+                           return (
+                             <div key={index} style={{display:"grid"}} onClick={() => choosePhoto(image.node.childImageSharp.fluid)}>
+                               <Img fluid={image.node.childImageSharp.fluid} className="gallery-image" alt="gallery-image" aria-label="gallery-image"/>
+                               </div>
+                           )
                         })
                     }
             </div>
@@ -73,7 +73,7 @@ const Gallery = () => {
         <Fade in={open}>
           <div className="modal-image-container">
           <CancelRoundedIcon className="modal-close-icon" onClick={handleClose}/>
-            <Img fluid={bottles.imageSet.edges[0].node.childImageSharp.fluid} className="modal-image"></Img>
+            <Img fluid={photo} className="modal-image"></Img>
           </div>
         </Fade>
       </Modal>

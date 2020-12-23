@@ -42,13 +42,24 @@
     // .modal-image-container{
     //     height: 100vh;
     // }
+    .modal-image-container{
+        &:focus,:focus-visible,:active{
+            outline: none;
+        }
+    }
     &:focus,:focus-visible,:active{
         outline: none;
     }
     .modal-image{
-        max-height: 90vh;
+        height: 90vh;
         img{
             object-fit: contain !important;
+            &:focus,:focus-visible,:active{
+                outline: none;
+            }
+        }
+        &:focus,:focus-visible,:active{
+            outline: none;
         }
     }
     .modal-close-icon{
