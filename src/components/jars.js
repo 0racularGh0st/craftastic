@@ -14,7 +14,7 @@ const JarContainer = (props) => {
             elevation={10}
         >
            <div>
-           <Img key={props.id} fixed={props.fixed} className="category-image-style" loading="eager" objectFit="contain" fadeIn={false}/>
+           <Img key={props.id} fluid={props.fluid} className="category-image-style" loading="eager" objectFit="contain" fadeIn={false}/>
            </div>
         </Paper>
     )
@@ -28,8 +28,8 @@ const Jars = () => {
         node {
           id
           childImageSharp {
-            fixed(height:400){
-              ...GatsbyImageSharpFixed_withWebp
+            fluid(maxHeight:400){
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
@@ -58,7 +58,7 @@ return (
                 >
                     {
                         jars.imageSet.edges.map((image, index) => {
-                            return <JarContainer id={image.node.id} key={index} fixed={image.node.childImageSharp.fixed} />
+                            return <JarContainer id={image.node.id} key={index} fluid={image.node.childImageSharp.fluid} />
                         })
                     }
       </Carousel>

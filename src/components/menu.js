@@ -35,7 +35,6 @@ const toggleBurger = () => {
         menu.classList.remove("show");
     }
     else {
-        console.log("hellow")
         menu.classList.add("show");
     }
 
