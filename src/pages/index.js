@@ -63,6 +63,7 @@ return (
         fadeIn 
         durationFadeIn={1000}
         className="rellax background-main-style"
+        loading="eager"
         />
         <div className="home-text-style">
         <h1 className="home-main-heading">Welcome to Craftastic! </h1>

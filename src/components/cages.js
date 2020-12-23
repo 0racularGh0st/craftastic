@@ -14,7 +14,7 @@ const CagesContainer = (props) => {
             elevation={10}
         >
            <div>
-           <Img key={props.id} fluid={props.fluid} className="category-image-style"/>
+           <Img key={props.id} fluid={props.fluid} className="category-image-style" loading="eager"/>
            </div>
         </Paper>
     )
