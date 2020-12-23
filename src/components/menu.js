@@ -90,7 +90,7 @@ const Menu = () => {
                 <InfoRoundedIcon className="menu-item-style"/>
                 <h4>About</h4>
             </Link>
-            <div className="menu-link-styles contact" onClick={()=>{smoothScroll(".contact-section",1000); toggleBurger();}}>
+            <div className="menu-link-styles contact" onClick={()=>{smoothScroll(".contact-section",1000); toggleBurger();}} role="button" tabIndex="0">
                 <PermPhoneMsgRoundedIcon className="menu-item-style"/>
                 <h4>Contact</h4>
             </div>
