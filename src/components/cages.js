@@ -50,7 +50,7 @@ return (
                     autoPlay={true}
                     animation={"fade"}
                     indicators={true}
-                    interval={2500}
+                    interval={2900}
                     navButtonsAlwaysVisible={true}
                     navButtonsAlwaysInvisible={false}
 

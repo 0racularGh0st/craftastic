@@ -14,7 +14,6 @@ const Header = ({ siteTitle }) => {
     }
   }
 `)
-console.log("Logo",logo);
   return(
   <header>
     <div>

@@ -53,7 +53,6 @@ return (
                     interval={2500}
                     navButtonsAlwaysVisible={true}
                     navButtonsAlwaysInvisible={false}
-
                 >
                     {
                         bottles.imageSet.edges.map((image, index) => {
