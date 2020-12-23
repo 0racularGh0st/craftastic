@@ -44,6 +44,8 @@ return (
             <h2>Wreaths</h2>
             <p style={{color:"#717171"}}>We also make wreaths that can uplift your front door or wherever you chose to hang them.</p>
           </div>
+          
+          <div style={{perspective:"600px"}}>
           <Carousel
                     className="category-carousel-style-reverse"
                     autoPlay={true}
@@ -60,6 +62,7 @@ return (
                         })
                     }
       </Carousel>
+          </div>
   </div>
 )
 }

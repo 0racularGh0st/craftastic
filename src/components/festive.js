@@ -44,6 +44,8 @@ return (
             <h2>Festive Decorations</h2>
             <p style={{color:"#717171"}}>We make festive themed decorations as well. Do check out these Christmas themed decorations.</p>
           </div>
+          
+          <div style={{perspective:"600px"}}>
           <Carousel
                     className="category-carousel-style"
                     autoPlay={true}
@@ -60,6 +62,7 @@ return (
                         })
                     }
       </Carousel>
+          </div>
   </div>
 )
 }

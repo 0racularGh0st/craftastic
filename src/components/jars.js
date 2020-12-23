@@ -44,6 +44,8 @@ return (
             <h2>Jars</h2>
             <p style={{color:"#717171"}}>Need a place to organize your stationery or paint-brushes for all you artists out there? Our customized jars can add some flare to your workspace.</p>
           </div>
+          
+          <div style={{perspective:"600px"}}>
           <Carousel
                     className="category-carousel-style-reverse"
                     autoPlay={true}
@@ -60,6 +62,7 @@ return (
                         })
                     }
       </Carousel>
+          </div>
   </div>
 )
 }

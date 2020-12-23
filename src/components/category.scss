@@ -72,10 +72,22 @@
         overflow: unset !important;
         margin: 1rem;
         width: 400px;
-        transform: perspective(600px) rotateY(-10deg);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -ms-transform: rotateY(-10deg);
+        -webkit-transform: rotateY(-10deg);
+        -moz-transform: rotateY(-10deg);
+        -o-transform: rotateY(-10deg);
+        transform: rotateY(-10deg);
         transition: all 0.3s ease;
         &:hover{
-            transform: perspective(600px) rotateY(0deg);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -ms-transform: rotateY(0deg);
+            -webkit-transform: rotateY(0deg);
+            -moz-transform: rotateY(0deg);
+            -o-transform: rotateY(0deg);
+            transform: rotateY(0deg);
 
             .category-paper{
                 box-shadow: var(--elevate10) !important;
@@ -87,10 +99,20 @@
         overflow: unset !important;
         margin: 1rem;
         width: 400px;
-        transform: perspective(600px) rotateY(10deg);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -ms-transform: rotateY(10deg);
+        -webkit-transform: rotateY(10deg);
+        -moz-transform: rotateY(10deg);
+        -o-transform: rotateY(10deg);
+        transform: rotateY(10deg);
         transition: all 0.3s ease;
         &:hover{
-            transform: perspective(600px) rotateY(0deg);
+            -ms-transform: rotateY(0deg);
+            -webkit-transform: rotateY(0deg);
+            -moz-transform: rotateY(0deg);
+            -o-transform: rotateY(0deg);
+            transform: rotateY(0deg);
 
             .category-paper-reverse{
                 box-shadow: var(--elevate10) !important;

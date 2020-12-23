@@ -44,6 +44,7 @@ return (
             <h2>Cages</h2>
             <p style={{color:"#717171"}}>We make these cages with candles inside them to light up your night.</p>
           </div>
+          <div style={{perspective:"600px"}}>
           <Carousel
                     className="category-carousel-style"
                     autoPlay={true}
@@ -60,6 +61,7 @@ return (
                         })
                     }
       </Carousel>
+          </div>
   </div>
 )
 }

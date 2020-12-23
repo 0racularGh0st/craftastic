@@ -44,9 +44,10 @@ return (
             <h2>Bottles</h2>
             <p style={{color:"#717171"}}>We take used bottles and turn them into showpieces that are worthy for a place on your living-room shelf.</p>
           </div>
+          <div style={{perspective:"600px"}}>
           <Carousel
                     className="category-carousel-style"
-                    autoPlay={true}
+                    autoPlay={false}
                     animation={"fade"}
                     indicators={true}
                     interval={2500}
@@ -59,7 +60,8 @@ return (
                             return <BottlesContainer id={image.node.id} key={index}  fluid={image.node.childImageSharp.fluid} />
                         })
                     }
-      </Carousel>
+          </Carousel>
+          </div>
   </div>
 )
 }
