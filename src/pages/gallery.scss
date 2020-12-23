@@ -17,18 +17,24 @@
         .gallery-images{
             display: grid;
             grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+            grid-column-gap: 5px;
+            grid-row-gap: 5px;
         }
     }
     @media screen and (min-width:768px){
         .gallery-images{
             display: grid;
             grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
         }
     }
     @media screen and (min-width:1024px){
         .gallery-images{
             display: grid;
             grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
         }
     }
 }
