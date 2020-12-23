@@ -14,7 +14,7 @@ const WreathsContainer = (props) => {
             elevation={10}
         >
            <div>
-           <Img key={props.id} fluid={props.fluid} className="category-image-style" loading="eager"/>
+           <Img key={props.id} fixed={props.fixed} className="category-image-style" loading="eager" objectFit="contain" fadeIn={false}/>
            </div>
         </Paper>
     )
@@ -28,8 +28,8 @@ const Wreaths = () => {
         node {
           id
           childImageSharp {
-            fluid(fit: INSIDE){
-                ...GatsbyImageSharpFluid_withWebp
+            fixed(height:400){
+              ...GatsbyImageSharpFixed_withWebp
             }
           }
         }
@@ -58,7 +58,7 @@ return (
                 >
                     {
                         wreaths.imageSet.edges.map((image, index) => {
-                            return <WreathsContainer id={image.node.id} key={index} fluid={image.node.childImageSharp.fluid} />
+                            return <WreathsContainer id={image.node.id} key={index} fixed={image.node.childImageSharp.fixed} />
                         })
                     }
       </Carousel>

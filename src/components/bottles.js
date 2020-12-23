@@ -14,7 +14,7 @@ const BottlesContainer = (props) => {
             elevation={10}
         >
            <div>
-           <Img key={props.id} fluid={props.fluid} className="category-image-style" loading="eager"/>
+           <Img key={props.id} fixed={props.fixed} className="category-image-style" loading="eager" objectFit="contain" fadeIn={false}/>
            </div>
         </Paper>
     )
@@ -28,8 +28,8 @@ const Bottles = () => {
         node {
           id
           childImageSharp {
-            fluid(fit: INSIDE){
-                ...GatsbyImageSharpFluid_withWebp
+            fixed(height:400){
+                ...GatsbyImageSharpFixed_withWebp
             }
           }
         }
@@ -47,7 +47,7 @@ return (
           <div style={{perspective:"600px"}}>
           <Carousel
                     className="category-carousel-style"
-                    autoPlay={false}
+                    autoPlay={true}
                     animation={"fade"}
                     indicators={true}
                     interval={2500}
@@ -57,7 +57,7 @@ return (
                 >
                     {
                         bottles.imageSet.edges.map((image, index) => {
-                            return <BottlesContainer id={image.node.id} key={index}  fluid={image.node.childImageSharp.fluid} />
+                            return <BottlesContainer id={image.node.id} key={index}  fixed={image.node.childImageSharp.fixed} />
                         })
                     }
           </Carousel>

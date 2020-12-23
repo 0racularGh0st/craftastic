@@ -14,7 +14,7 @@ const CagesContainer = (props) => {
             elevation={10}
         >
            <div>
-           <Img key={props.id} fluid={props.fluid} className="category-image-style" loading="eager"/>
+           <Img key={props.id} fixed={props.fixed} className="category-image-style" loading="eager" objectFit="contain" fadeIn={false}/>
            </div>
         </Paper>
     )
@@ -28,8 +28,8 @@ const Cages = () => {
         node {
           id
           childImageSharp {
-            fluid(fit: INSIDE){
-                ...GatsbyImageSharpFluid_withWebp
+            fixed(height:400){
+              ...GatsbyImageSharpFixed_withWebp
             }
           }
         }
@@ -57,7 +57,7 @@ return (
                 >
                     {
                         cages.imageSet.edges.map((image, index) => {
-                            return <CagesContainer id={image.node.id} key={index}  fluid={image.node.childImageSharp.fluid} />
+                            return <CagesContainer id={image.node.id} key={index}  fixed={image.node.childImageSharp.fixed} />
                         })
                     }
       </Carousel>
