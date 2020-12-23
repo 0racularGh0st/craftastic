@@ -2,7 +2,7 @@
     filter: brightness(0.3);   
     width: 100vw;
     z-index: -1;
-    height: var(--height);
+    height: 100vh;
     position: absolute !important;
 }
 .parallax-background{
@@ -15,7 +15,7 @@
     z-index: 1;
     position: absolute;
     color: white;
-    height: var(--height);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,11 +25,11 @@
 }
 .home-content-container-one{
     position: relative;
-    height: var(--height);
+    height: 100vh;
 }
 .home-content-container-two{
     position: relative;
-    min-height: var(--height);
+    min-height: 100vh;
     background: var(--bg-color);
     a{
         text-decoration: none;
