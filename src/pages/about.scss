@@ -1,0 +1,10 @@
+.about-main-container{
+    background: var(--bg-color);
+    padding-top: 100px;
+    text-align: center;
+    .about-content{
+        color: rgb(113, 113, 113);
+        margin: auto;
+        max-width: 600px;
+    }
+}

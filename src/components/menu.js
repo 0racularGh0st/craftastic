@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect,useState} from 'react';
 import { Link } from 'gatsby';
 import "./menu.scss";
 import HomeRoundedIcon from '@material-ui/icons/HomeRounded';
@@ -53,7 +53,9 @@ const handleKeyDown = (ev) => {
      toggleBurger();
    }
 }
+
 const Menu = () => {
+    const [status,setStatus] = useState("active");
     useEffect(()=>{
         const burger = document.querySelector(".burger");
         const menu = document.querySelector(".menu-wrapper");
@@ -76,7 +78,7 @@ const Menu = () => {
                 burger.classList.add("toggle");
             }
           });
-    })
+    },[status]);
     return(
         <div>
             <div className="burger">
@@ -97,7 +99,7 @@ const Menu = () => {
                 <InfoRoundedIcon className="menu-item-style"/>
                 <h4>About</h4>
             </Link>
-            <div className="menu-link-styles contact" onClick={()=>{smoothScroll(".contact-section",1000); toggleBurger();}} role="button" tabIndex="0" onKeyDown={handleKeyDown}>
+            <div className="menu-link-styles contact" onClick={()=>{smoothScroll(".contact-section",1000); toggleBurger();}}  onKeyDown={handleKeyDown}>
                 <PermPhoneMsgRoundedIcon className="menu-item-style"/>
                 <h4>Contact</h4>
             </div>

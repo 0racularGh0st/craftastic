@@ -38,6 +38,7 @@ const IndexPage = () => {
       heading1.style.transform = "translateX("+ scrollPosition*0.3 + "px)";
       subHeading1.style.transform = "translateX(-"+ scrollPosition*0.4 + "px)";
     })
+    
     return() => {
       console.log("cleanup");
       rellax.destroy();
